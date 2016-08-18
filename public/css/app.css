@@ -28,27 +28,52 @@ header {
     color: white;
     top: 10px;
     left: 10px; }
-  header .register-block {
+  header .user-block-header {
+    padding: 0 !important; }
+    header .user-block-header .image-user {
+      width: 57px;
+      margin: 5px;
+      background-position: center;
+      float: left;
+      padding-bottom: 24%;
+      background-size: cover;
+      background-image: url(../img/telegram-logo.png); }
+      @media (max-width: 768px) {
+        header .user-block-header .image-user {
+          width: 25%;
+          padding-bottom: 25%; } }
+    header .user-block-header .user-caption {
+      width: 75%;
+      padding: 7px;
+      float: left; }
+      @media (max-width: 768px) {
+        header .user-block-header .user-caption {
+          width: 60%; } }
+  header .register-block, header .user-block-header {
     padding: 5px 25px;
     background-color: #EB4549;
     position: absolute;
     top: 3%;
-    right: 3%; }
+    right: 3%;
+    transition: all 500ms;
+    transition-timing-function: ease-in-out; }
+    header .register-block:hover, header .user-block-header:hover {
+      background-color: #3BC391; }
     @media (max-width: 768px) {
-      header .register-block {
+      header .register-block, header .user-block-header {
         position: relative;
         top: 0;
         right: 0;
         margin-top: 20px; } }
-    header .register-block a {
+    header .register-block a, header .user-block-header a {
       display: inline-block; }
-    header .register-block a:hover {
+    header .register-block a:hover, header .user-block-header a:hover {
       text-decoration: none !important; }
-    header .register-block h3 {
+    header .register-block h3, header .user-block-header h3 {
       font-family: AnimeAce;
       color: #f8f2e2;
       margin-bottom: 5px; }
-    header .register-block article {
+    header .register-block article, header .user-block-header article {
       font-family: "Helvetica Neue";
       font-size: 16px;
       color: #f8f2e2;
@@ -81,9 +106,9 @@ main .desktop-menu {
         height: auto;
         font-family: AnimeAce;
         color: #f8f2e2;
-        font-size: 26px; }
+        font-size: 26px;
+        transition: all 500ms; }
       main .desktop-menu .uk-navbar .uk-navbar-nav li.uk-active a, main .desktop-menu .uk-navbar .uk-navbar-nav li:hover a {
-        transition: all 500ms;
         background: transparent !important;
         color: #374047;
         border-bottom: 10px solid #374047;

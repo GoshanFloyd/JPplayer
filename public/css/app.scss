@@ -48,12 +48,42 @@ header {
     left: 10px;
   }
 
-  .register-block{
+  .user-block-header{
+    padding: 0 !important;
+   .image-user{
+     width: 57px;
+     margin: 5px;
+     background-position: center;
+     float: left;
+     padding-bottom: 24%;
+     background-size: cover;
+     background-image: url(../img/telegram-logo.png);
+     @media (max-width: 768px) {
+       width: 25%;
+       padding-bottom: 25%;
+     }
+    }
+    .user-caption{
+      width: 75%;
+      padding: 7px;
+      float: left;
+      @media (max-width: 768px) {
+        width: 60%;
+      }
+    }
+  }
+
+  .register-block,.user-block-header{
     padding: 5px 25px;
     background-color: $red-color;
     position: absolute;
     top: 3%;
     right: 3%;
+    transition: all 500ms ;
+    transition-timing-function: ease-in-out;
+    &:hover{
+      background-color: $green-color;
+    }
     @media (max-width: 768px) {
       position: relative;
       top: 0;
@@ -111,10 +141,10 @@ main{
             font-family: AnimeAce;
             color: $white-color;
             font-size: 26px;
+            transition: all 500ms;
           }
           &.uk-active, &:hover{
             a{
-              transition: all 500ms;
               background: transparent !important;
               color: $black-color;
               border-bottom: 10px solid $black-color;
