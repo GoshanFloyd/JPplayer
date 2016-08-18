@@ -1,0 +1,184 @@
+@font-face {
+  font-family: AnimeAce;
+  src: url(../fonts/AnimeAce.ttf); }
+.uk-offcanvas-bar {
+  background-color: #374047; }
+  .uk-offcanvas-bar li {
+    width: 100%; }
+    .uk-offcanvas-bar li a {
+      color: #f8f2e2;
+      font-family: AnimeAce;
+      font-size: 18px; }
+  .uk-offcanvas-bar li.uk-active a {
+    background-color: #f8f2e2;
+    color: #374047; }
+
+body {
+  background-color: #f8f2e2; }
+
+header {
+  background: #374047;
+  padding: 4% 0; }
+  header a {
+    text-align: center; }
+    header a .logo-header {
+      width: 50%; }
+  header .mobile-link {
+    position: absolute;
+    color: white;
+    top: 10px;
+    left: 10px; }
+  header .register-block {
+    padding: 5px 25px;
+    background-color: #EB4549;
+    position: absolute;
+    top: 3%;
+    right: 3%; }
+    @media (max-width: 768px) {
+      header .register-block {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 20px; } }
+    header .register-block a {
+      display: inline-block; }
+    header .register-block a:hover {
+      text-decoration: none !important; }
+    header .register-block h3 {
+      font-family: AnimeAce;
+      color: #f8f2e2;
+      margin-bottom: 5px; }
+    header .register-block article {
+      font-family: "Helvetica Neue";
+      font-size: 16px;
+      color: #f8f2e2;
+      text-align: center;
+      line-height: 1; }
+
+main h2.main-title {
+  background-color: #3BC391;
+  padding: 15px 0;
+  margin-bottom: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  font-family: AnimeAce;
+  color: #f8f2e2; }
+main .desktop-menu {
+  width: 100%;
+  background-color: #3BC391; }
+  main .desktop-menu .uk-navbar {
+    background: transparent; }
+    main .desktop-menu .uk-navbar .uk-navbar-nav {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around; }
+      main .desktop-menu .uk-navbar .uk-navbar-nav li a {
+        display: block;
+        padding: 10px 0;
+        line-height: 1.2;
+        height: auto;
+        font-family: AnimeAce;
+        color: #f8f2e2;
+        font-size: 26px; }
+      main .desktop-menu .uk-navbar .uk-navbar-nav li.uk-active a, main .desktop-menu .uk-navbar .uk-navbar-nav li:hover a {
+        transition: all 500ms;
+        background: transparent !important;
+        color: #374047;
+        border-bottom: 10px solid #374047;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; }
+main .about {
+  padding: 25px 0; }
+  main .about .grid-block [class*=uk-width] {
+    margin-bottom: 15px; }
+  main .about .grid-block > div:nth-child(1) h3 {
+    color: #2F79C3; }
+  main .about .grid-block > div:nth-child(2) h3 {
+    color: #3BC391; }
+  main .about h2 {
+    margin-top: 15px;
+    text-align: center;
+    font-family: AnimeAce;
+    font-size: 40px;
+    color: #374047; }
+  main .about .uk-grid {
+    margin-top: 40px; }
+    main .about .uk-grid .about-block {
+      background-color: #374047;
+      padding: 20px;
+      height: 100%;
+      box-sizing: border-box; }
+      main .about .uk-grid .about-block .uk-grid {
+        margin-top: 0; }
+        main .about .uk-grid .about-block .uk-grid h3 {
+          font-family: AnimeAce;
+          font-size: 26px;
+          text-align: center; }
+        main .about .uk-grid .about-block .uk-grid article {
+          color: white; }
+  main .about .post-title {
+    font-family: AnimeAce;
+    color: #2F79C3;
+    font-size: 26px; }
+main .faq .faq-list {
+  padding: 40px 0; }
+  main .faq .faq-list .faq-block {
+    margin-bottom: 20px; }
+    main .faq .faq-list .faq-block h3 {
+      font-family: "Helvetica Neue";
+      font-size: 28px;
+      color: #f8f2e2;
+      background-color: #2F79C3;
+      padding: 10px 15px;
+      margin-bottom: 5px; }
+    main .faq .faq-list .faq-block article {
+      font-family: "Helvetica Neue";
+      font-size: 18px;
+      padding: 10px; }
+main .donat .donat-article {
+  padding: 40px 0; }
+  main .donat .donat-article article:first-child {
+    color: #3BC391;
+    font-family: AnimeAce;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.1; }
+    @media (max-width: 768px) {
+      main .donat .donat-article article:first-child {
+        font-size: 17px; } }
+  main .donat .donat-article article:last-child {
+    font-family: "Helvetica Neue";
+    color: #374047;
+    font-size: 22px;
+    line-height: 1.1;
+    text-align: center; }
+    @media (max-width: 768px) {
+      main .donat .donat-article article:last-child {
+        font-size: 16px; } }
+
+footer {
+  background-color: #374047; }
+  footer .uk-grid {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    footer .uk-grid h3 {
+      color: #2F79C3;
+      font-family: AnimeAce;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 5px; }
+    footer .uk-grid ul {
+      list-style: none; }
+      footer .uk-grid ul li {
+        margin-bottom: 15px; }
+        footer .uk-grid ul li a {
+          font-family: "Helvetica Neue";
+          color: #3BC391;
+          font-size: 20px;
+          line-height: 1.2; }
+
+/*# sourceMappingURL=app.css.map */
