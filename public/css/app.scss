@@ -146,12 +146,14 @@ main{
         li{
           a{
             display: block;
-            padding: 10px 0;
+            padding-top: 10px !important;
+            padding-bottom: 5px !important;
             line-height: 1.2;
             height: auto;
             font-family: AnimeAce;
             color: $white-color;
             font-size: 26px;
+            border-bottom: 10px solid transparent;
             transition: all 500ms;
           }
           &.uk-active, &:hover{
@@ -635,4 +637,4 @@ footer{
   }
 }
 
-#
+
