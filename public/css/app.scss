@@ -9,6 +9,11 @@ $white-color: #f8f2e2;
   src: url(../fonts/AnimeAce.ttf);
 }
 
+@font-face{
+  font-family: "Helvetica Neue";
+  src: url(../fonts/HelveticaNeueCyr-Roman.otf);
+}
+
 .uk-offcanvas-bar{
   background-color: $black-color;
   li{
@@ -285,7 +290,7 @@ main{
     }
     .registration-form{
       padding: 10px 0;
-      width: 40%;
+      width: 100%;
       box-sizing: border-box;
       float: left;
       @media (max-width: 768px) {
@@ -331,7 +336,7 @@ main{
           left: 5px;
           z-index: 0;
           transition: all 500ms;
-          font-size: 20px;
+          font-size: 16px;
           font-family: Helvetica;
           color: $green-color;
           align-items: center;
@@ -355,7 +360,7 @@ main{
           background: $green-color;
           display: block;
           position: absolute;
-          top: 43px;
+          top: 40px;
         }
 
         input[type="text"]:focus + label,
@@ -365,7 +370,7 @@ main{
         input[type="password"]:focus + label,
         input[type="password"]:valid + label{
           top: -10px !important;
-          font-size: 16px;
+          font-size: 14px;
           transition: all 500ms !important;
           color: $white-color !important;
         }
@@ -383,7 +388,7 @@ main{
         width: 100%;
         display: flex;
         justify-content: flex-end;
-        padding: 15px 0;
+        padding: 7px 0;
         button{
           padding: 5px 35px;
           background-color: $green-color;
@@ -393,20 +398,208 @@ main{
           color: $white-color;
           font-weight: bold;
         }
+        button.full-width{
+          padding: 5px 20px;
+        }
       }
     }
     article{
       box-sizing: border-box;
       float: left;
-      width: 60%;
+      width: 100%;
       text-align: center;
       padding: 10px;
       font-family: Helvetica Neue;
       color: $green-color;
-      font-size: 18px;
+      font-size: 14px;
       @media (max-width: 768px) {
         width: 100%;
-        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+  .code-article{
+    @media (max-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+    .code-caption{
+      padding: 10px 10px 10px 5px;
+      display: block;
+      box-sizing: border-box;
+      z-index: 20;
+      width: 30%;
+      text-align: left;
+      font-family: Helvetica Neue;
+      font-size: 20px;
+      color: #f8f2e2;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid #3BC391;
+      margin-right: 20px;
+      @media (max-width: 768px) {
+        width: 58%;
+        margin-bottom: 10px;
+      }
+    }
+
+    article{
+      padding: 10px 0;
+      display: inline-block;
+      width: auto;
+      box-sizing: border-box;
+      z-index: 20;
+      text-align: left;
+      margin-right: 10px;
+      font-family: Helvetica Neue;
+      font-size: 20px;
+      color: #f8f2e2;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px solid #3BC391;
+      @media (max-width: 768px) {
+        width: auto;
+        margin-top: 20px;
+      }
+    }
+  }
+  .table-result{
+    margin-bottom: 20px;
+    .body-table{
+      background-color: $black-color;
+      padding: 20px;
+      h3{
+        font-family: AnimeAce;
+        font-size: 22px;
+        color: $white-color;
+      }
+      table{
+        thead{
+          tr{
+            background-color: $red-color;
+            font-family: "Helvetica Neue";
+            color: $white-color;
+            font-size: 18px;
+          }
+        }
+        tbody{
+          tr{
+            font-family: "Helvetica Neue";
+            color: $white-color;
+            font-size: 18px;
+          }
+          tr:nth-child(odd){
+            background-color: $green-color;
+          }
+          tr:nth-child(even){
+            background-color: $blue-color;
+          }
+        }
+      }
+      .uk-pagination{
+        li{
+          a{
+            font-family: "Helvetica Neue";
+            color: $white-color;
+          }
+        }
+        li.uk-active{
+          a{
+            background-color: $red-color !important;
+          }
+        }
+        li:nth-child(odd){
+          a{
+            background-color: $blue-color;
+          }
+        }
+        li:nth-child(even){
+          a{
+            background-color: $green-color;
+          }
+        }
+      }
+    }
+  }
+
+  .file-upload{
+    width: 100%;
+    min-height: 60px;
+    box-sizing: border-box;
+    padding: 10px ;
+  }
+
+  .static-file,
+  .file-drag,
+  .file-ready{
+    display: none;
+  }
+
+  .file-upload.static{
+    background-color: $green-color;
+    .static-file{
+      display: block;
+      h3{
+        color: $white-color !important;
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+      p{
+        width: 100%;
+        margin: 10px 0;
+        color: $white-color;
+        text-align: center;
+      }
+    }
+  }
+
+  .file-upload.drag{
+    background-color: $blue-color;
+    .file-drag{
+      display: block;
+      h3{
+        color: $white-color !important;
+        font-size: 22px;
+        margin-bottom: 5px;
+      }
+      p{
+        width: 100%;
+        margin: 10px 0;
+        color: $white-color;
+        text-align: center;
+      }
+    }
+  }
+
+  .file-upload.upload{
+    background-color: $white-color;
+    .file-ready{
+      display: block;
+      .uk-grid > *{
+        margin-bottom: 0;
+      }
+      h3{
+        color: $green-color !important;
+        font-size: 22px !important;
+        text-align: left !important;
+        font-family: "Helvetica Neue" !important;
+        margin-bottom: 5px !important;
+      }
+      p{
+        width: 100%;
+        margin: 10px 0 !important;
+        text-align: left !important;
+        font-size: 18px !important;
+        color: $red-color;
+      }
+      button{
+        background-color: $green-color;
+        height: 100%;
+        width: 100%;
+        font-family: AnimeAce;
+        color: $white-color;
+        font-size: 22px;
+        border: 0;
       }
     }
   }

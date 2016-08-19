@@ -1,6 +1,9 @@
 @font-face {
   font-family: AnimeAce;
   src: url(../fonts/AnimeAce.ttf); }
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(../fonts/HelveticaNeueCyr-Roman.otf); }
 .uk-offcanvas-bar {
   background-color: #374047; }
   .uk-offcanvas-bar li {
@@ -209,7 +212,7 @@ main .form-block .form-switcher {
       border-bottom: 2px solid #3BC391; }
 main .form-block .registration-form {
   padding: 10px 0;
-  width: 40%;
+  width: 100%;
   box-sizing: border-box;
   float: left; }
   @media (max-width: 768px) {
@@ -250,7 +253,7 @@ main .form-block .registration-form {
       left: 5px;
       z-index: 0;
       transition: all 500ms;
-      font-size: 20px;
+      font-size: 16px;
       font-family: Helvetica;
       color: #3BC391;
       align-items: center;
@@ -270,7 +273,7 @@ main .form-block .registration-form {
       background: #3BC391;
       display: block;
       position: absolute;
-      top: 43px; }
+      top: 40px; }
     main .form-block .registration-form .input-block input[type="text"]:focus + label,
     main .form-block .registration-form .input-block input[type="text"]:valid + label,
     main .form-block .registration-form .input-block input[type="email"]:focus + label,
@@ -278,7 +281,7 @@ main .form-block .registration-form {
     main .form-block .registration-form .input-block input[type="password"]:focus + label,
     main .form-block .registration-form .input-block input[type="password"]:valid + label {
       top: -10px !important;
-      font-size: 16px;
+      font-size: 14px;
       transition: all 500ms !important;
       color: #f8f2e2 !important; }
     main .form-block .registration-form .input-block input[type="text"]:focus + label + span,
@@ -292,7 +295,7 @@ main .form-block .registration-form {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 15px 0; }
+    padding: 7px 0; }
     main .form-block .registration-form .submit-div button {
       padding: 5px 35px;
       background-color: #3BC391;
@@ -301,19 +304,153 @@ main .form-block .registration-form {
       border: 0;
       color: #f8f2e2;
       font-weight: bold; }
+    main .form-block .registration-form .submit-div button.full-width {
+      padding: 5px 20px; }
 main .form-block article {
   box-sizing: border-box;
   float: left;
-  width: 60%;
+  width: 100%;
   text-align: center;
   padding: 10px;
   font-family: Helvetica Neue;
   color: #3BC391;
-  font-size: 18px; }
+  font-size: 14px; }
   @media (max-width: 768px) {
     main .form-block article {
       width: 100%;
-      margin-bottom: 20px; } }
+      margin-top: 20px; } }
+@media (max-width: 768px) {
+  main .code-article {
+    display: flex;
+    align-items: center; } }
+main .code-article .code-caption {
+  padding: 10px 10px 10px 5px;
+  display: block;
+  box-sizing: border-box;
+  z-index: 20;
+  width: 30%;
+  text-align: left;
+  font-family: Helvetica Neue;
+  font-size: 20px;
+  color: #f8f2e2;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #3BC391;
+  margin-right: 20px; }
+  @media (max-width: 768px) {
+    main .code-article .code-caption {
+      width: 58%;
+      margin-bottom: 10px; } }
+main .code-article article {
+  padding: 10px 0;
+  display: inline-block;
+  width: auto;
+  box-sizing: border-box;
+  z-index: 20;
+  text-align: left;
+  margin-right: 10px;
+  font-family: Helvetica Neue;
+  font-size: 20px;
+  color: #f8f2e2;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #3BC391; }
+  @media (max-width: 768px) {
+    main .code-article article {
+      width: auto;
+      margin-top: 20px; } }
+main .table-result {
+  margin-bottom: 20px; }
+  main .table-result .body-table {
+    background-color: #374047;
+    padding: 20px; }
+    main .table-result .body-table h3 {
+      font-family: AnimeAce;
+      font-size: 22px;
+      color: #f8f2e2; }
+    main .table-result .body-table table thead tr {
+      background-color: #EB4549;
+      font-family: "Helvetica Neue";
+      color: #f8f2e2;
+      font-size: 18px; }
+    main .table-result .body-table table tbody tr {
+      font-family: "Helvetica Neue";
+      color: #f8f2e2;
+      font-size: 18px; }
+    main .table-result .body-table table tbody tr:nth-child(odd) {
+      background-color: #3BC391; }
+    main .table-result .body-table table tbody tr:nth-child(even) {
+      background-color: #2F79C3; }
+    main .table-result .body-table .uk-pagination li a {
+      font-family: "Helvetica Neue";
+      color: #f8f2e2; }
+    main .table-result .body-table .uk-pagination li.uk-active a {
+      background-color: #EB4549 !important; }
+    main .table-result .body-table .uk-pagination li:nth-child(odd) a {
+      background-color: #2F79C3; }
+    main .table-result .body-table .uk-pagination li:nth-child(even) a {
+      background-color: #3BC391; }
+main .file-upload {
+  width: 100%;
+  min-height: 60px;
+  box-sizing: border-box;
+  padding: 10px; }
+main .static-file,
+main .file-drag,
+main .file-ready {
+  display: none; }
+main .file-upload.static {
+  background-color: #3BC391; }
+  main .file-upload.static .static-file {
+    display: block; }
+    main .file-upload.static .static-file h3 {
+      color: #f8f2e2 !important;
+      font-size: 22px;
+      margin-bottom: 5px; }
+    main .file-upload.static .static-file p {
+      width: 100%;
+      margin: 10px 0;
+      color: #f8f2e2;
+      text-align: center; }
+main .file-upload.drag {
+  background-color: #2F79C3; }
+  main .file-upload.drag .file-drag {
+    display: block; }
+    main .file-upload.drag .file-drag h3 {
+      color: #f8f2e2 !important;
+      font-size: 22px;
+      margin-bottom: 5px; }
+    main .file-upload.drag .file-drag p {
+      width: 100%;
+      margin: 10px 0;
+      color: #f8f2e2;
+      text-align: center; }
+main .file-upload.upload {
+  background-color: #f8f2e2; }
+  main .file-upload.upload .file-ready {
+    display: block; }
+    main .file-upload.upload .file-ready .uk-grid > * {
+      margin-bottom: 0; }
+    main .file-upload.upload .file-ready h3 {
+      color: #3BC391 !important;
+      font-size: 22px !important;
+      text-align: left !important;
+      font-family: "Helvetica Neue" !important;
+      margin-bottom: 5px !important; }
+    main .file-upload.upload .file-ready p {
+      width: 100%;
+      margin: 10px 0 !important;
+      text-align: left !important;
+      font-size: 18px !important;
+      color: #EB4549; }
+    main .file-upload.upload .file-ready button {
+      background-color: #3BC391;
+      height: 100%;
+      width: 100%;
+      font-family: AnimeAce;
+      color: #f8f2e2;
+      font-size: 22px;
+      border: 0; }
 
 footer {
   background-color: #374047; }
